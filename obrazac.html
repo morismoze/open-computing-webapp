@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="dizajn.css">
+    <title>Najviši neboderi na svijetu | Pretraživanje</title>
+</head>
+<body>
+    <div id="main-cnt">
+        <header id="header">
+            <div id="h1-div">
+                <h1 id="main-title">Najviši neboderi svijeta</h1>
+            </div>
+            <div id="img-div" role="button" onclick="location.href='index.html'"></div>
+        </header>
+        <div id="main-inner-cnt">
+            <div id="left-inner-cnt">
+                <nav id="nav">
+                    <ul id="list-cnt">
+                        <li class="list"><a href="index.html">Početna</a></li>
+                        <li class="list"><a href="obrazac.html">Pretraživanje</a></li>
+                        <li class="list"><a href="http://www.fer.unizg.hr/predmet/or">Predmet OR</a></li>
+                        <li class="list"><a href="http://www.fer.unizg.hr/" target="_blank">Sjedište FER-a</a></li>
+                        <li class="list"><a href="mailto:mm50180@fer.hr">Mail autoru</a></li>
+                        <li class="list"><a href="podaci.xml">XML podaci</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div id="right-inner-cnt">
+                <div id="search-table-div">
+                    <form class="form-cnt" method="GET" action="pretraga.php">
+                        <div class="input-div">
+                            <label for="name-inp">Naziv nebodera:</label><br>
+                            <input type="text" id="name-inp" name="naziv" placeholder="Upišite naziv, npr. 'Burj Khalifa'">
+                            <br>
+                            <label for="location-inp">Mjesto nebodera:</label><br>
+                            <input type="text" id="location-inp" name="mjesto" placeholder="Upišite mjesto, npr. 'Dubai'">
+                            <br>
+                            <label for="owner-inp">Materijal:</label><br>
+                            <input type="text" id="material" name="materijal" placeholder="Upišite materijal, npr. 'ojačani-beton'">
+                            <br>
+                            <label for="height-inp">Vlasnik nebodera:</label><br>
+                            <input type="text" id="height-inp" name="vlasnik" placeholder="Upišite vlasnika, npr. 'Emaar Properties'">
+                            <br>
+                            <label for="architect-inp">Arhitekt nebodera:</label><br>
+                            <input type="text" id="architect-inp" name="arhitekt" placeholder="Upišite arhitekta, npr. 'Hyder Consulting'">
+                        </div>
+                        <div class="multiple-select-div-and-radio">
+                            <label for="multiple-select">Status<br>gradnje:</label>
+                            <select id="multiple-select" multiple="multiple" name="mulselect[]" style="width: 9.5em;">
+                                <option id="zavrsena-gradnja" value="Završena gradnja">Završena gradnja</option>
+                                <option id="u-tijeku" value="U tijeku">U tijeku</option>
+                                <option id="nije-dovrseno" value="Nije dovršeno">Nije dovršeno</option>
+                            </select>
+                            <div class="radio-cnt">
+                                <p style="font-weight: bolder;">Visina(m):</p>
+                                <input type="radio" id="0-299" name="radio" value="0-299">
+                                <label for="0-299">0-299</label><br>
+                                <input type="radio" id="300-629" name="radio" value="300-629">
+                                <label for="300-629">300-629</label><br>
+                                <input type="radio" id="630-829" name="radio" value="630-829">
+                                <label for="630-829">630-829</label>                                
+                            </div>
+                        </div>
+                        <div class="checkbox-div">
+                            <label >Funkcija nebodera:</label>
+                            <div class="function-div" id="function-cnt">
+                                <label for="office">Uredska</label>
+                                <input type="checkbox" id="office" value="uredska" name="checkbox[]">
+                                <label for="office">Rezidencijska</label>
+                                <input type="checkbox" id="residential" value="rezidencijska" name="checkbox[]">
+                                <label for="office">Hotelska</label>
+                                <input type="checkbox" id="hotel" value="hotelska" name="checkbox[]">
+                                <label for="office">Trgovačka</label>
+                                <input type="checkbox" id="retail" value="trgovačka" name="checkbox[]">
+                            </div>
+                        </div>
+                        <div>
+                            <label for="sel-area" style="font-weight: bolder;">Površina(m&sup2;):</label>
+                            <select id="sel-area" name="select2" style="width: 6em; margin-right: 10px;">
+                                <option value="" selected="selected" disabled="disabled" style="background-color: #a8a8a8;"></option>
+                                <option id="0-305000" value="0-305000">0-305000</option>
+                                <option id="306000-379000" value="306000-379000">306000-380000</option>
+                                <option id="380000-390000" value="380000-390000">&gt;380000</option>
+                            </select>
+                            <label for="sel-cost" style="font-weight: bolder; margin-left: 10px;">Cijena(US&#36;):</label>
+                            <select id="sel-cost" name="mselect3" style="width: 6.5em;">
+                                <option value="" selected="selected" disabled="disabled" style="background-color: #a8a8a8;"></option>
+                                <option id="0-305000" value="0-305000">0-1.5 mlrd</option>
+                                <option id="306000-380000" value="306000-380000">1.5-2.4 mlrd</option>
+                                <option id="&gt;380000" value="&gt;380000">&gt;2.5 mlrd</option>
+                            </select>
+                        </div>
+                        <div class="buttons">
+                            <input type="submit" value="Pretraži">
+                            <input type="reset" value="Obriši sva polja">
+                        </div>
+                    </form>
+                    <div id="search-title-div">
+                        <h2 style="text-align: center; margin-top: 1em;">Rezultati pretrage:</h2>
+                    </div>
+                </div>
+                <div id="footer">
+                    <label>Autor:</label><strong> Moris Može</strong>
+                    <p id="about">Web sjedište nekoliko najviših nebodera na svijetu.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

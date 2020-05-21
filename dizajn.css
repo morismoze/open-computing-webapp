@@ -1,0 +1,393 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway);
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+#main-cnt {
+    flex-basis: 100vw;
+    height: 100vh;
+    /* overflow: hidden; */
+}
+
+#header {
+    border: 1px solid #505050;
+    border-radius: 25px;
+    margin: 0.5rem;
+    height: 18%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#h1-div,
+#img-div {
+    margin: 0.3rem;
+}
+
+#h1-div {
+    height: 80%;
+    width: 90%;
+    order: 2;
+    text-align: center;
+    background: linear-gradient(to left, #505050 9%, #ffffff 73%);
+    border-radius: 25px;
+    font-family: Raleway;
+    font-size: 4.5vh;
+}
+
+#main-title {
+    padding-top: 0.15em;
+    /* ovaj background se odnosi na text zbog -webkit-background-clip */
+    background: linear-gradient(to right, #505050 30%, #ffffff 40%);
+    /* omogucavanje teksta transparentnim */
+	-webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    padding-right: 6em;
+}
+
+
+#img-div {
+    border: 1px solid black;
+    height: 90%;
+    width: 8%;
+    background-image: url(./images/naslovna.jpg);
+    background-size: 225px auto;
+    border-radius: 20%;
+    border-color: #505050;
+    cursor: pointer;
+    margin-left: 0.6em;
+}
+
+#main-inner-cnt {
+    border: 1px solid #505050;
+    border-radius: 25px;
+    margin: 0.5rem;
+    display: flex;
+    flex-direction: row;
+    min-height: 78%;
+}
+
+#left-inner-cnt {
+    border: 1px solid #505050;
+    border-radius: 25px;
+    margin: 0.5rem;
+    width: 11%;
+    max-height: 570.425px;
+    background-color: #505050;
+}
+
+#nav {
+    margin-top: 4em;
+}
+
+.list {
+    padding-top: 45px;
+}
+
+#list-cnt {
+    list-style-type: none;
+    text-align: center;    
+}
+
+.list a {
+    text-decoration: none;
+    color: white;
+    font-family: Raleway;
+    font-size: larger;
+}
+
+.list.list a:hover {
+    border-top: 2.5px solid white;
+    border-bottom: 2.5px solid white;
+    border-radius: 10%;
+    transition: 0.2s;
+    color: #A9A9A9;
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+
+
+#right-inner-cnt {
+    border: 1px solid #505050;
+    margin: 0.5rem;
+    width: 88%;
+    min-height: 100%;
+}
+
+#main-body {
+    border: 1px solid #505050;
+    margin: 0.5rem;
+    height: 85%;
+    display: flex;
+    flex-direction: column;
+}
+
+#top-body-div {
+    background-image: url(./images/body_back.jpg);
+    background-size: 100% 100%;
+    height: 50%;
+    width: 100%;
+}
+
+#table {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    text-align: center;
+    width: 30%;
+    margin-left: 69%;
+    margin-top: 12px;
+}
+
+#table th, #table td {
+    border: 1px solid black;
+    padding: 8px;
+}
+
+#table th {
+    background-color: #808080;
+}
+
+.rows:nth-child(even) {
+    background-color: #DCDCDC;
+}
+
+#top-body-div,
+#bottom-body-div {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+}
+
+#ol-div, #ul-div {
+    list-style-position: inside;
+    width: 50%;
+    margin-top: 1em;
+    margin-left: 10px;
+}
+
+#ol-div ol, 
+#ul-div ul {
+    /* najcesce se koristi za stavljanje razmaka medu retcima */
+    line-height: 2em;
+    font-family: Raleway;
+    color: #808080;
+}
+
+#ol-div {
+    font-size: 1.8em;
+}
+
+#ul-div {
+    font-size: 1.8em;
+}
+
+#bottom-body-div {
+    display: flex;
+    flex-direction: row;
+}
+
+#footer {
+    border: 2px solid black;
+    margin: 0.5rem;
+    text-align: center;
+    background: linear-gradient(to left, #505050 9%, #ffffff 73%);
+    text-align: left;
+    font-family: Raleway;
+    color: black;
+    padding-left: 1em;
+    font-size: 1.1em;
+}
+
+#about {
+    padding-top: 0.8em;
+}
+
+/* Stranica obrazac.html */
+
+#search-table-div {
+    width: 100%;
+    border-radius: 10px;
+    display: flex;
+    height: 85%;
+    flex-direction: row;
+    margin-bottom: 1.4em;
+}
+
+#search-title-div {
+    width: 67%;
+    float: right;
+    height: 95%;
+}
+
+.form-cnt {
+    /* STAVLJANJEM SVIH MARGINA NA auto ELEMENT UNUTAR div-a SE SAVRSENO CENTRIRA */
+    margin: auto;
+    width: 400px;
+    height: 465px;
+    border-radius: 10px;
+    text-align: center;
+    margin-left:1em;
+    margin-top: 1em;
+    margin-right: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.input-div {
+    margin-top: 1.2em;
+}
+
+.input-div input {
+    width: 20em;
+    height: 2em;
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 0.9em;
+    border-radius: 8px;
+}
+
+.input-div label {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 0.9em;
+    float: left;
+    font-weight: bolder;
+
+}
+
+/*:active mora doci nakon :hover u CSS-u, kako bi bilo funkcionalno*/
+.input-div input:hover {
+    background-color: #E0FFFF;
+    transition: 0.3s;
+}
+
+/* focus sluzi NAKON sto se klikne na element */
+.input-div input:focus {
+    outline: none;
+    background-color: #B0E0E6;
+}
+
+.multiple-select-div-and-radio {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.multiple-select-div-and-radio > label {
+    margin-right: 1rem;
+    font-weight: bolder;
+}
+
+.radio-cnt {
+   margin-left: 2rem;
+   text-align: left;
+}
+
+.checkbox-div {
+    margin-top: 0.4rem;
+    height: 4rem;
+    line-height: 1.6rem;
+    margin-bottom: 1rem;
+}
+
+.checkbox-div > label {
+    font-weight: bolder;
+}
+
+.function-div input:not(:last-child) {
+    margin-right: 0.5rem;
+}
+
+/* ovo ispod sve za gumbe */
+.buttons {
+    margin-top: 1em;
+    margin-bottom: 0.2em;
+}
+
+.buttons input {
+    width: 120px;
+    border: none;
+    padding: 0.4em;
+    color: black;
+    font-weight: bolder;
+    cursor: pointer;
+    border: #505050 2px solid;
+    border-radius: 8px;
+}
+.buttons input:hover {
+    background-color: #C8C8C8;
+    transition: 0.5s;
+}
+
+.buttons input:active {
+    background-color: #a8a8a8;
+}
+
+.buttons input:focus {
+    outline: none;
+}
+
+.buttons input:last-child {
+    border-color: #DC143C;
+}
+
+/* XML Podaci */
+.xml-table-cnt {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.xml-table {
+    justify-self: flex-start;
+    align-self: center;
+    margin-left: 0% !important;
+    height: 80% !important;
+    width: 95% !important;
+}
+
+.xml-table td {
+    padding: 0 !important;
+    width: 200px;
+}
+
+.xml-table td:last-child select {
+    width: 80%;
+}
+
+.xml-table td:last-child select option:nth-child(even) {
+    background-color: #505050;
+    color: white;
+    font-weight: bold;
+}
+
+.xml-table td:last-child select option:nth-child(odd) {
+    background-color: #ffffff;
+    color: black;
+    font-weight: bold;
+}
+
+.xml-table-footer {
+   justify-self: flex-end;
+}
+
+/* REZULTATI UPITA U OBRASCU */
+.form-results {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    text-align: center;
+    width: 95%;
+    float: right;
+}
+
+.form-results th, .form-results td {
+    border: 1px solid black;
+    padding: 5px;
+}
+
+.form-results th {
+    background-color: #999898;
+}

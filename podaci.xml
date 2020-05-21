@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE kolekcija-nebodera SYSTEM "gramatika.dtd">
+<?xml-stylesheet type="text/xsl" href="pretvorba.xsl"?>
+
+<kolekcija-nebodera>
+    <neboder id="bk001" funkcija="rezidencijska" wikihandle="Burj_Khalifa">
+        <naziv>
+            <osnovni-naziv>Burj Khalifa</osnovni-naziv>
+            <drugi-naziv>Burj Dubai</drugi-naziv>
+        </naziv>    
+        <adresa>
+            <ulica>1 Emaar Boulevard</ulica>
+            <mjesto>Dubai</mjesto>
+        </adresa>
+        <gradnja materijal="čelik"> 
+            <datum-pocetka-gradnje>06/01/2004</datum-pocetka-gradnje>
+            <status>Završena gradnja</status>
+        </gradnja>
+        <cijena>1.5</cijena>
+        <povrsina>309473m&#178;</povrsina>
+        <visina>829m</visina>
+        <arhitekt>Skidmore, Owings &amp; Merrill LLP</arhitekt>
+        <arhitekt>Hyder Consulting</arhitekt>
+        <vlasnik>Emaar Properties</vlasnik>
+    </neboder>
+
+    <neboder id="st002" funkcija="hotelska" wikihandle="Shanghai_Tower">
+        <naziv>
+            <osnovni-naziv>Shangai Tower</osnovni-naziv>
+        </naziv>
+        <adresa>
+            <ulica>501 Yincheng Middle Rd</ulica>
+            <mjesto postanski-broj="200120">Shangai</mjesto>
+        </adresa>
+        <gradnja materijal="čelik-beton">
+            <datum-pocetka-gradnje>29/11/2008</datum-pocetka-gradnje>
+            <status>Završena gradnja</status>
+        </gradnja>
+        <cijena>2.4</cijena>
+        <povrsina>380000m&#178;</povrsina>
+        <visina>632m</visina>
+        <arhitekt>Jun Xia</arhitekt>
+        <vlasnik>Shanghai Tower Construction and Development</vlasnik>
+    </neboder>
+
+    <neboder id="ab003" funkcija="hotelska" wikihandle="Abraj_Al_Bait">
+        <naziv>
+            <osnovni-naziv>Abraj Al Bait Clock Tower</osnovni-naziv>
+        </naziv>
+        <adresa>
+            <ulica>21955 MAKKAH</ulica>
+            <mjesto>Mecca</mjesto>
+        </adresa>
+        <gradnja materijal="beton">
+            <datum-pocetka-gradnje>29/11/2008</datum-pocetka-gradnje>
+            <status>Završena gradnja</status>
+        </gradnja>
+        <cijena>15.1</cijena>
+        <povrsina>310638m&#178;</povrsina>
+        <visina>601m</visina>
+        <arhitekt>SL Rasch GmbH</arhitekt>
+        <arhitekt>Dar Al-Handasah Architects</arhitekt>
+        <vlasnik>Ministry of Islamic Affairs</vlasnik>
+    </neboder>
+
+    <neboder id="fc004" funkcija="uredska" wikihandle="Ping_An_Finance_Centre">
+        <naziv>
+            <osnovni-naziv>Ping An Finance Centre</osnovni-naziv>
+            <drugi-naziv>Ping An IFC</drugi-naziv>
+        </naziv>
+        <adresa>
+            <ulica>No. 5033 Yitian Road</ulica>
+            <mjesto postanski-broj="518000">Shenzhen</mjesto>
+        </adresa>
+        <gradnja materijal="ojačani-beton">
+            <datum-pocetka-gradnje>29/08/2010</datum-pocetka-gradnje>
+            <status>Nije dovršeno</status>
+        </gradnja>
+        <cijena>1.5</cijena>
+        <povrsina>385918m&#178;</povrsina>
+        <visina>599m</visina>
+        <arhitekt>Kohn Pedersen Fox Associates</arhitekt>
+        <vlasnik>Ping An Insurance Company of China</vlasnik>
+    </neboder>
+
+    <neboder id="gf005" funkcija="uredska" wikihandle="Goldin_Finance_117">
+        <naziv>
+            <osnovni-naziv>Goldin Finance 117</osnovni-naziv>
+            <drugi-naziv>China 117 Tower</drugi-naziv>
+        </naziv>
+        <adresa>
+            <ulica>Xiqing District</ulica>
+            <mjesto postanski-broj="300380">Tianjin</mjesto>
+        </adresa>
+        <gradnja materijal="ojačani-beton">
+            <datum-pocetka-gradnje>29/08/2010</datum-pocetka-gradnje>
+            <status>U tijeku</status>
+        </gradnja>
+        <povrsina>370000m&#178;</povrsina>
+        <visina>596m</visina>
+        <arhitekt>P &amp; T Group</arhitekt>
+        <arhitekt>East China Architectural Design &amp; Research Institute</arhitekt>
+        <vlasnik>Goldin Properties Holdings Limited</vlasnik>
+    </neboder>
+
+    <neboder id="lt006" funkcija="trgovačka" wikihandle="Lotte_World_Tower">
+        <naziv>
+            <osnovni-naziv>Lotte World Tower</osnovni-naziv>
+            <drugi-naziv>Lotte World Premium Tower</drugi-naziv>
+        </naziv>
+        <adresa>
+            <ulica>300 Olympic-ro</ulica>
+            <mjesto postanski-broj="05551">Seoul</mjesto>
+        </adresa>
+        <gradnja materijal="čelik">
+            <datum-pocetka-gradnje>01/02/2011</datum-pocetka-gradnje>
+            <status>Završena gradnja</status>
+        </gradnja>
+        <cijena>3.4</cijena>
+        <povrsina>304081m&#178;</povrsina>
+        <visina>556m</visina>
+        <arhitekt>Kohn Pedersen Fox Associates</arhitekt>
+        <arhitekt>BAUM Architects</arhitekt>
+        <vlasnik>Lotte Property &amp; Development</vlasnik>
+    </neboder>
+</kolekcija-nebodera>

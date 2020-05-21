@@ -1,0 +1,24 @@
+<!ELEMENT kolekcija-nebodera (neboder)*>
+<!ELEMENT neboder (naziv, adresa, gradnja, cijena?, povrsina, visina, arhitekt+, vlasnik)>
+<!ELEMENT naziv (osnovni-naziv, drugi-naziv?)>
+<!ELEMENT adresa (ulica, mjesto)>
+<!ELEMENT gradnja (datum-pocetka-gradnje, status)>
+<!ELEMENT cijena (#PCDATA)>
+<!ELEMENT povrsina (#PCDATA)>
+<!ELEMENT visina (#PCDATA)>
+<!ELEMENT wikihandle (#PCDATA)>
+<!ELEMENT arhitekt (#PCDATA)>
+<!ELEMENT vlasnik (#PCDATA)>
+<!ELEMENT osnovni-naziv (#PCDATA)>
+<!ELEMENT drugi-naziv (#PCDATA)>
+<!ELEMENT ulica (#PCDATA)>
+<!ELEMENT mjesto (#PCDATA)>
+<!ELEMENT datum-pocetka-gradnje (#PCDATA)>
+<!ELEMENT status (#PCDATA)>
+
+<!ATTLIST neboder id ID #REQUIRED>
+<!ATTLIST neboder funkcija (uredska|rezidencijska|hotelska|trgovačka) #REQUIRED>
+<!ATTLIST neboder wikihandle CDATA #REQUIRED>
+<!ATTLIST gradnja materijal (beton|ojačani-beton|čelik-beton|čelik) #REQUIRED>
+<!ATTLIST mjesto postanski-broj CDATA #IMPLIED>
+

@@ -68,7 +68,10 @@ if(!empty($queryArray)) {
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link rel="stylesheet" href="dizajn.css"/>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ==" crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js" integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew==" crossorigin=""></script>
     <title>Najviši neboderi na svijetu | Rezultati</title>
+    <script src="detalji.js"></script>
 </head>
 <body>
     <div id="main-cnt">
@@ -82,12 +85,12 @@ if(!empty($queryArray)) {
             <div id="left-inner-cnt">
                 <nav id="nav">
                     <ul id="list-cnt">
-                        <li class="list"><a href="index.html">Početna</a></li>
-                        <li class="list"><a href="obrazac.html">Pretraživanje</a></li>
-                        <li class="list"><a href="http://www.fer.unizg.hr/predmet/or">Predmet OR</a></li>
-                        <li class="list"><a href="http://www.fer.unizg.hr/" target="_blank">Sjedište FER-a</a></li>
-                        <li class="list"><a href="mailto:mm50180@fer.hr">Mail autoru</a></li>
-                        <li class="list"><a href="podaci.xml">XML podaci</a></li>
+                        <li class="list details"><a href="index.html">Početna</a></li>
+                        <li class="list details"><a href="obrazac.html">Pretraživanje</a></li>
+                        <li class="list details"><a href="http://www.fer.unizg.hr/predmet/or">Predmet OR</a></li>
+                        <li class="list details"><a href="http://www.fer.unizg.hr/" target="_blank">Sjedište FER-a</a></li>
+                        <li class="list details"><a href="mailto:mm50180@fer.hr">Mail autoru</a></li>
+                        <li class="list details"><a href="podaci.xml">XML podaci</a></li>
                     </ul>
                 </nav>
             </div>
@@ -175,10 +178,9 @@ if(!empty($queryArray)) {
                             <tr>
                                 <th>Naziv</th>
                                 <th>Visina</th>
-                                <th>Slika</th>
-                                <th>Sažetak</th>
                                 <th>WikiREST koordinate</th>
                                 <th>Nominatim koordinate</th>
+                                <th>Akcija</th>
                             </tr>
                             <?php
                                 foreach($result as $node) {
@@ -191,18 +193,17 @@ if(!empty($queryArray)) {
                                     $nominatimCoords = wikiMediaActionApi($node->getAttribute('wikihandle'));
                                     $nominatimLat = $nominatimCoords[0];
                                     $nominatimLon = $nominatimCoords[1];
-                                    echo "<tr><td>";
+                                    $naziv = $node->getElementsByTagName('naziv')->item(0)->getElementsByTagName('osnovni-naziv')->item(0)->nodeValue;
+                                    echo "<tr onmouseover='changeColor(this)' onmouseout='returnColor(this)'><td>";
                                     print($node->getElementsByTagName('naziv')->item(0)->getElementsByTagName('osnovni-naziv')->item(0)->nodeValue);
                                     echo "</td><td>";
                                     print($node->getElementsByTagName('visina')->item(0)->nodeValue);
                                     echo "</td><td>";
-                                    echo("<a href='".$orgImage."' target='_blank'><img src='".$thmbImage."' width='40px' height='auto'></img></a>");
-                                    echo("</td><td style='max-width: 100px; font-size: 10px;'>");
-                                    echo($summary);
-                                    echo "</td><td>";
                                     echo "Lat: ".$lat."<br/>Lon: ".$lon;
                                     echo "</td><td>";
                                     echo "Lat: ".$nominatimLat."<br/>Lon: ".$nominatimLon;
+                                    echo "</td><td>";
+                                    echo "<button row_id='".$node->getAttribute('id')."' handle='".$node->getAttribute('wikihandle')."' wrapi_lat='".$lat."' wrapi_lon='".$lon."' napi_lat='".$nominatimLat."' napi_lon='".$nominatimLon."' name='".$naziv."' style='cursor: pointer;' onclick='getDetails(this)'>Detalji</button>";
                                     echo "</td><tr>";
                                 }
                             ?>
